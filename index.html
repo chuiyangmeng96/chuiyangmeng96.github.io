@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuiyang Meng | Personal Website</title>
+    <meta
+      name="description"
+      content="Chuiyang Meng - Ph.D. candidate in Electrical and Computer Engineering at UBC, focusing on self-evolving AI, edge intelligence, and distributed machine learning."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient-layer" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a href="#home" class="brand" aria-label="Home">CM</a>
+      <nav class="site-nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#skills">Skills</a>
+      </nav>
+      <a class="btn btn-outline" href="mailto:chuiyangmeng@ece.ubc.ca">Contact</a>
+    </header>
+
+    <main>
+      <section id="home" class="hero container reveal">
+        <p class="eyebrow">Ph.D. Candidate, Electrical and Computer Engineering, UBC</p>
+        <h1>Chuiyang Meng</h1>
+        <p class="hero-copy">
+          I work on self-evolving AI, edge intelligence, and distributed machine learning.
+          My research focuses on resource-aware optimization and robust adaptation for
+          foundation models in practical networked systems.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#publications">View Publications</a>
+          <a class="btn btn-outline" href="Chuiyang_Meng_CV.pdf" target="_blank" rel="noreferrer"
+            >Download CV</a
+          >
+          <a class="btn btn-outline" href="mailto:chuiyangmeng@gmail.com">Email Me</a>
+        </div>
+        <ul class="highlights">
+          <li>IEEE Graduate Student Member</li>
+          <li>Applied Machine Learning Intern, Vector Institute</li>
+          <li>Based in Vancouver, Canada</li>
+        </ul>
+      </section>
+
+      <section id="about" class="container section reveal">
+        <div class="section-head">
+          <p class="eyebrow">About</p>
+          <h2>Research Focus and Education</h2>
+        </div>
+        <div class="grid-two">
+          <article class="card">
+            <h3>Research Interests</h3>
+            <ul>
+              <li>Self-evolving AI</li>
+              <li>Edge intelligence</li>
+              <li>Distributed machine learning</li>
+              <li>Network management</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Education</h3>
+            <ul class="timeline">
+              <li>
+                <div class="item-top">
+                  <strong>University of British Columbia</strong>
+                  <span>2021 - Present</span>
+                </div>
+                <p>Ph.D., Electrical and Computer Engineering</p>
+                <p>Supervisor: Vincent W.S. Wong</p>
+                <p>Thesis: Resource-aware Distributed Edge Intelligence</p>
+              </li>
+              <li>
+                <div class="item-top">
+                  <strong>Johns Hopkins University</strong>
+                  <span>2018 - 2020</span>
+                </div>
+                <p>M.S., Electrical and Computer Engineering</p>
+              </li>
+              <li>
+                <div class="item-top">
+                  <strong>Harbin Institute of Technology</strong>
+                  <span>2014 - 2018</span>
+                </div>
+                <p>B.Eng., Electronics and Information Engineering</p>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="container section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Experience</p>
+          <h2>Research and Applied AI Work</h2>
+        </div>
+        <div class="stack">
+          <article class="card">
+            <div class="item-top">
+              <h3>Applied Machine Learning Intern, Responsible AI Team</h3>
+              <span>Jan 2026 - Present</span>
+            </div>
+            <p class="org">Vector Institute, Toronto, Canada</p>
+            <ul>
+              <li>
+                Researching deepfake video detection systems for manipulated multimodal content.
+              </li>
+              <li>
+                Building training and validation recipes to improve robustness in real-world forgery
+                scenarios.
+              </li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="item-top">
+              <h3>Graduate Research Assistant</h3>
+              <span>Sep 2021 - Present</span>
+            </div>
+            <p class="org">University of British Columbia, Vancouver, Canada</p>
+            <ul>
+              <li>
+                Investigating emergent modularities in foundation models and brain-like functional
+                specialization.
+              </li>
+              <li>
+                Proposed FLoRG: federated fine-tuning with low-rank Gram matrices and Procrustes
+                alignment.
+              </li>
+              <li>
+                Proposed ZorBA: zeroth-order federated fine-tuning with heterogeneous block
+                activation.
+              </li>
+              <li>
+                Developed ASFL with online resource allocation and improved learning efficiency.
+              </li>
+              <li>
+                Designed a GNN-based framework for decentralized federated learning over D2D
+                networks.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="publications" class="container section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Publications</h2>
+        </div>
+        <div class="card">
+          <h3>Conference Publications</h3>
+          <ol class="pub-list">
+            <li>
+              <strong>FLoRG: Federated Fine-tuning with Low-rank Gram Matrices and Procrustes
+                Alignment</strong>
+              <p>ICLR 2026, Rio de Janeiro, Brazil</p>
+            </li>
+            <li>
+              <strong>ZorBA: Zeroth-order Federated Fine-tuning of LLMs with Heterogeneous Block
+                Activation</strong>
+              <p>IEEE INFOCOM 2026, Tokyo, Japan</p>
+            </li>
+            <li>
+              <strong>GNN-based Neighbor Selection and Resource Allocation for Decentralized Federated
+                Learning</strong>
+              <p>IEEE GLOBECOM 2023, Kuala Lumpur, Malaysia</p>
+            </li>
+            <li>
+              <strong>A Mobile Relay Selection Strategy in Cooperative Spectrum Sharing
+                Framework</strong>
+              <p>IEEE ICC 2017, Paris, France</p>
+            </li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Journal Publications</h3>
+          <ol class="pub-list">
+            <li>
+              <strong>ASFL: An Adaptive Model Splitting and Resource Allocation Framework for Split
+                Federated Learning</strong>
+              <p>Major revision, IEEE Transactions on Mobile Computing, 2025</p>
+            </li>
+            <li>
+              <strong>Tackling Resource Allocation for Decentralized Federated Learning: A GNN-based
+                Approach</strong>
+              <p>IEEE Transactions on Mobile Computing, vol. 24, no. 10, 2025</p>
+            </li>
+            <li>
+              <strong>Drone-Assisted Zero-Configuration Localization Framework for Wireless Sensor
+                Networks</strong>
+              <p>IEEE Transactions on Vehicular Technology, vol. 66, no. 11, 2017</p>
+            </li>
+            <li>
+              <strong>A New Turbo Equalizer Conditioned on Estimated Channel for MIMO MMSE
+                Receiver</strong>
+              <p>IEEE Communications Letters, vol. 21, no. 4, 2017</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="teaching" class="container section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Service and Teaching</p>
+          <h2>Academic Contribution</h2>
+        </div>
+        <div class="grid-two">
+          <article class="card">
+            <h3>Technical Reviewer</h3>
+            <ul>
+              <li>IEEE Transactions on Wireless Communications</li>
+              <li>IEEE Transactions on Mobile Computing</li>
+              <li>IEEE Internet of Things Journal</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Teaching Assistant</h3>
+            <ul>
+              <li>
+                ELEC 331 Computer Communications, University of British Columbia (Fall 2021 to
+                Spring 2025)
+              </li>
+              <li>
+                EN 520.647 Information Theory, Johns Hopkins University (Fall 2019)
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="container section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Capabilities</p>
+          <h2>Skills and Contact</h2>
+        </div>
+        <div class="grid-two">
+          <article class="card">
+            <h3>Technical Skills</h3>
+            <ul class="skill-grid">
+              <li>Python (PyTorch)</li>
+              <li>Matlab</li>
+              <li>Linux</li>
+              <li>LaTeX</li>
+              <li>GitHub</li>
+              <li>Hugging Face</li>
+              <li>Mathematical Optimization</li>
+            </ul>
+            <p class="lang">Languages: English (Proficient), Mandarin (Native)</p>
+          </article>
+          <article class="card contact-card">
+            <h3>Get in Touch</h3>
+            <p>
+              For collaborations, research opportunities, or speaking invitations, feel free to
+              contact me.
+            </p>
+            <a class="btn btn-solid" href="mailto:chuiyangmeng@ece.ubc.ca"
+              >chuiyangmeng@ece.ubc.ca</a
+            >
+            <a class="btn btn-outline" href="mailto:chuiyangmeng@gmail.com"
+              >chuiyangmeng@gmail.com</a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Chuiyang Meng. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
