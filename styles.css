@@ -319,6 +319,12 @@ h3 {
   font-size: 0.95rem;
 }
 
+.pub-authors {
+  margin-top: 0.35rem;
+  color: #31475f;
+  font-size: 0.92rem;
+}
+
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
