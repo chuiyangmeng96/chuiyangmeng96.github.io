@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chuiyang Meng | Personal Website</title>
+    <title>Chuiyang Meng | About</title>
     <meta
       name="description"
       content="Chuiyang Meng - Ph.D. candidate in Electrical and Computer Engineering at UBC, focusing on self-evolving AI, edge intelligence, and distributed machine learning."
@@ -14,19 +14,19 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260222-2" />
+    <link rel="stylesheet" href="styles.css?v=20260222-3" />
   </head>
   <body>
     <div class="ambient-layer" aria-hidden="true"></div>
 
     <header class="site-header">
-      <a href="#home" class="brand" aria-label="Home">CM</a>
+      <a href="index.html" class="brand" aria-label="Home">CM</a>
       <nav class="site-nav">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#publications">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#skills">Skills</a>
+        <a href="index.html" class="active">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="skills.html">Skills</a>
       </nav>
       <a class="btn btn-outline" href="mailto:chuiyangmeng@ece.ubc.ca">Contact</a>
     </header>
@@ -43,7 +43,7 @@
               foundation models in practical networked systems.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-solid" href="#publications">View Publications</a>
+              <a class="btn btn-solid" href="publications.html">View Publications</a>
               <a class="btn btn-outline" href="Chuiyang_Meng_CV.pdf" target="_blank" rel="noreferrer"
                 >Download CV</a
               >
@@ -64,7 +64,7 @@
               loading="eager"
               decoding="async"
             />
-            <figcaption></figcaption>
+            <figcaption>Vancouver, BC</figcaption>
           </figure>
         </div>
       </section>
@@ -74,7 +74,7 @@
           <p class="eyebrow">About</p>
           <h2>Research Focus and Education</h2>
         </div>
-        <div class="grid-two">
+        <div class="stack">
           <article class="card">
             <h3>Research Interests</h3>
             <ul>
@@ -112,195 +112,6 @@
               </li>
             </ul>
           </article>
-        </div>
-      </section>
-
-      <section id="experience" class="container section reveal">
-        <div class="section-head">
-          <p class="eyebrow">Experience</p>
-          <h2>Research and Applied AI Work</h2>
-        </div>
-        <div class="stack">
-          <article class="card">
-            <div class="item-top">
-              <h3>Applied Machine Learning Intern, Responsible AI Team</h3>
-              <span>Jan 2026 - Present</span>
-            </div>
-            <p class="org">Vector Institute, Toronto, Canada</p>
-            <ul>
-              <li>
-                Researching deepfake video detection systems for manipulated multimodal content.
-              </li>
-              <li>
-                Building training and validation recipes to improve robustness in real-world forgery
-                scenarios.
-              </li>
-            </ul>
-          </article>
-          <article class="card">
-            <div class="item-top">
-              <h3>Graduate Research Assistant</h3>
-              <span>Sep 2021 - Present</span>
-            </div>
-            <p class="org">University of British Columbia, Vancouver, Canada</p>
-            <ul>
-              <li>
-                Investigating emergent modularities in foundation models and brain-like functional
-                specialization.
-              </li>
-              <li>
-                Proposed FLoRG: federated fine-tuning with low-rank Gram matrices and Procrustes
-                alignment.
-              </li>
-              <li>
-                Proposed ZorBA: zeroth-order federated fine-tuning with heterogeneous block
-                activation.
-              </li>
-              <li>
-                Developed ASFL with online resource allocation and improved learning efficiency.
-              </li>
-              <li>
-                Designed a GNN-based framework for decentralized federated learning over D2D
-                networks.
-              </li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="publications" class="container section reveal">
-        <div class="section-head">
-          <p class="eyebrow">Selected Work</p>
-          <h2>Publications</h2>
-        </div>
-        <div class="card">
-          <h3>Conference Publications</h3>
-          <ol class="pub-list">
-            <li>
-              <strong>FLoRG: Federated Fine-tuning with Low-rank Gram Matrices and Procrustes
-                Alignment</strong>
-              <p class="pub-authors">
-                Authors: <strong>Chuiyang Meng</strong>, Ming Tang, and Vincent W.S. Wong
-              </p>
-              <p>ICLR 2026, Rio de Janeiro, Brazil</p>
-            </li>
-            <li>
-              <strong>ZorBA: Zeroth-order Federated Fine-tuning of LLMs with Heterogeneous Block
-                Activation</strong>
-              <p class="pub-authors">
-                Authors: <strong>Chuiyang Meng</strong>, Ming Tang, and Vincent W.S. Wong
-              </p>
-              <p>IEEE INFOCOM 2026, Tokyo, Japan</p>
-            </li>
-            <li>
-              <strong>GNN-based Neighbor Selection and Resource Allocation for Decentralized Federated
-                Learning</strong>
-              <p class="pub-authors">
-                Authors: <strong>Chuiyang Meng</strong>, Ming Tang, Mehdi Setayesh, and Vincent
-                W.S. Wong
-              </p>
-              <p>IEEE GLOBECOM 2023, Kuala Lumpur, Malaysia</p>
-            </li>
-            <li>
-              <strong>A Mobile Relay Selection Strategy in Cooperative Spectrum Sharing
-                Framework</strong>
-              <p class="pub-authors">
-                Authors: Xiao Deng, Xuanli Wu, <strong>Chuiyang Meng</strong>, Shuai Han, and
-                Xiaojie Fang
-              </p>
-              <p>IEEE ICC 2017, Paris, France</p>
-            </li>
-          </ol>
-        </div>
-        <div class="card">
-          <h3>Journal Publications</h3>
-          <ol class="pub-list">
-            <li>
-              <strong>ASFL: An Adaptive Model Splitting and Resource Allocation Framework for Split
-                Federated Learning</strong>
-              <p class="pub-authors">
-                Authors: <strong>Chuiyang Meng</strong>, Ming Tang, and Vincent W.S. Wong
-              </p>
-              <p>Major revision, IEEE Transactions on Mobile Computing, 2025</p>
-            </li>
-            <li>
-              <strong>Tackling Resource Allocation for Decentralized Federated Learning: A GNN-based
-                Approach</strong>
-              <p class="pub-authors">
-                Authors: <strong>Chuiyang Meng</strong>, Ming Tang, Mehdi Setayesh, and Vincent
-                W.S. Wong
-              </p>
-              <p>IEEE Transactions on Mobile Computing, vol. 24, no. 10, 2025</p>
-            </li>
-            <li>
-              <strong>Drone-Assisted Zero-Configuration Localization Framework for Wireless Sensor
-                Networks</strong>
-              <p class="pub-authors">
-                Authors: Zijun Gong, Cheng Li, Fan Jiang, Ruoyu Su, Ramachandran Venkatesan,
-                <strong>Chuiyang Meng</strong>, Shuai Han, Yan Zhang, Shudong Liu, and Kun Hao
-              </p>
-              <p>IEEE Transactions on Vehicular Technology, vol. 66, no. 11, 2017</p>
-            </li>
-            <li>
-              <strong>A New Turbo Equalizer Conditioned on Estimated Channel for MIMO MMSE
-                Receiver</strong>
-              <p class="pub-authors">
-                Authors: Cheng Li, Fan Jiang, <strong>Chuiyang Meng</strong>, and Zijun Gong
-              </p>
-              <p>IEEE Communications Letters, vol. 21, no. 4, 2017</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="teaching" class="container section reveal">
-        <div class="section-head">
-          <p class="eyebrow">Service and Teaching</p>
-          <h2>Academic Contribution</h2>
-        </div>
-        <div class="grid-two">
-          <article class="card">
-            <h3>Technical Reviewer</h3>
-            <ul>
-              <li>IEEE Transactions on Wireless Communications</li>
-              <li>IEEE Transactions on Mobile Computing</li>
-              <li>IEEE Internet of Things Journal</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Teaching Assistant</h3>
-            <ul>
-              <li>
-                ELEC 331 Computer Communications, University of British Columbia (Fall 2021 to
-                Spring 2025)
-              </li>
-              <li>
-                EN 520.647 Information Theory, Johns Hopkins University (Fall 2019)
-              </li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" class="container section reveal">
-        <div class="section-head">
-          <p class="eyebrow">Capabilities</p>
-          <h2>Skills and Contact</h2>
-        </div>
-        <div class="grid-two">
-          <article class="card">
-            <h3>Technical Skills</h3>
-            <ul class="skill-grid">
-              <li>Python (PyTorch)</li>
-              <li>Matlab</li>
-              <li>Linux</li>
-              <li>LaTeX</li>
-              <li>GitHub</li>
-              <li>Hugging Face</li>
-              <li>Mathematical Optimization</li>
-            </ul>
-            <p class="lang">Languages: English (Proficient), Mandarin (Native)</p>
-          </article>
           <article class="card contact-card">
             <h3>Get in Touch</h3>
             <p>
@@ -322,6 +133,6 @@
       <p>© <span id="year"></span> Chuiyang Meng. All rights reserved.</p>
     </footer>
 
-    <script src="script.js?v=20260222-2"></script>
+    <script src="script.js?v=20260222-3"></script>
   </body>
 </html>
