@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 const revealElements = Array.from(document.querySelectorAll(".reveal"));
 const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
 const sectionMap = navLinks
@@ -7,36 +9,26 @@ const sectionMap = navLinks
   })
   .filter(Boolean);
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.16 }
-);
+revealElements.forEach((element) => element.classList.add("is-visible"));
 
-revealElements.forEach((element) => revealObserver.observe(element));
+if ("IntersectionObserver" in window) {
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const pair = sectionMap.find((item) => item.section === entry.target);
+        if (!pair) return;
 
-const navObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      const pair = sectionMap.find((item) => item.section === entry.target);
-      if (!pair) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => link.classList.remove("active"));
+          pair.link.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.35, rootMargin: "-20% 0px -35% 0px" }
+  );
 
-      if (entry.isIntersecting) {
-        navLinks.forEach((link) => link.classList.remove("active"));
-        pair.link.classList.add("active");
-      }
-    });
-  },
-  { threshold: 0.35, rootMargin: "-20% 0px -35% 0px" }
-);
-
-sectionMap.forEach((item) => navObserver.observe(item.section));
+  sectionMap.forEach((item) => navObserver.observe(item.section));
+}
 
 const yearNode = document.getElementById("year");
 if (yearNode) yearNode.textContent = String(new Date().getFullYear());
