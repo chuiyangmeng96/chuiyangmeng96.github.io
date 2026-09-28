@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-09",
+    "title": "Joined Simon Fraser University",
+    "body": "I joined Simon Fraser University as a Postdoctoral Research Fellow.",
+    "href": "experience.html#experience",
+    "source": "Current CV: appointment starts September 2026."
+  },
+  {
+    "date": "2026-06",
+    "title": "ASFL accepted by IEEE TMC",
+    "body": "Our adaptive model splitting and resource allocation framework for split federated learning was accepted by IEEE Transactions on Mobile Computing.",
+    "href": "publications.html#asfl",
+    "source": "Acceptance month confirmed by the user on September 28, 2026."
+  },
+  {
+    "date": "2026-05",
+    "title": "Successfully defended my PhD",
+    "body": "I successfully defended my PhD dissertation at the University of British Columbia, advised by Prof. Vincent W.S. Wong.",
+    "href": "experience.html#education",
+    "source": "User confirmed a successful defense in May 2026 and formal PhD completion in June 2026 on September 28, 2026."
+  },
+  {
+    "date": "2026-01",
+    "title": "FLoRG accepted at ICLR 2026",
+    "body": "Our paper on federated fine-tuning with low-rank Gram matrices and Procrustes alignment was accepted at ICLR 2026.",
+    "href": "publications.html#florg",
+    "source": "Acceptance month confirmed by the user on September 28, 2026."
+  },
+  {
+    "date": "2026-01",
+    "title": "Internship at the Vector Institute",
+    "body": "I joined the Responsible AI Team as an Applied Machine Learning Intern, working on deepfake video detection and robust machine learning.",
+    "href": "experience.html#experience",
+    "source": "Current CV: internship January–April 2026, Responsible AI Team."
+  },
+  {
+    "date": "2025-12",
+    "title": "ZorBA accepted at IEEE INFOCOM 2026",
+    "body": "Our paper on zeroth-order federated fine-tuning of LLMs with heterogeneous block activation was accepted at IEEE INFOCOM 2026.",
+    "href": "publications.html#zorba",
+    "source": "Acceptance month confirmed by the user on September 28, 2026."
+  },
+  {
+    "date": "2025-10",
+    "title": "GNN-based resource allocation in IEEE TMC",
+    "body": "Our paper on GNN-based resource allocation for decentralized federated learning appeared in IEEE Transactions on Mobile Computing.",
+    "href": "publications.html#gnn-tmc",
+    "source": "Current CV: volume 24, number 10, October 2025. This is the issue date, not the acceptance date."
+  },
+  {
+    "date": "2023-12",
+    "title": "Paper at IEEE GLOBECOM 2023",
+    "body": "Our work on GNN-based neighbor selection and resource allocation for decentralized federated learning appeared at IEEE GLOBECOM 2023.",
+    "href": "publications.html#gnn-globecom",
+    "source": "Current CV: IEEE GLOBECOM, December 2023. This does not assert an acceptance or presentation date."
+  }
+]

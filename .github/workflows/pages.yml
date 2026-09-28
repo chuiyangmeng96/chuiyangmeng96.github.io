@@ -28,10 +28,16 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare public site
+        run: |
+          mkdir -p _site
+          cp *.html styles.css script.js robots.txt sitemap.xml Chuiyang_Meng_CV.pdf life-photo-1.jpg .nojekyll _site/
+          cp -R assets _site/assets
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
