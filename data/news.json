@@ -1,6 +1,13 @@
 [
   {
     "date": "2026-09",
+    "title": "Social Circuits and CORTEX now on arXiv",
+    "body": "Our preprints on multi-agent echo chambers and learning shared and specialized functions in dense language models are now available on arXiv.",
+    "href": "publications.html#social-circuits",
+    "source": "Official arXiv records 2609.34444 and 2609.34449; both submitted September 28, 2026."
+  },
+  {
+    "date": "2026-09",
     "title": "Joined Simon Fraser University",
     "body": "I joined Simon Fraser University as a Postdoctoral Research Fellow.",
     "href": "experience.html#experience",

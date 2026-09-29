@@ -38,7 +38,12 @@ def citation(p):
         fields["doi"] = p["doi"]
     if p.get("arxiv"):
         fields["url"] = p["arxiv"]
+    if p.get("arxivId"):
+        fields["eprint"] = p["arxivId"]
+        fields["archivePrefix"] = "arXiv"
     kind = {"journal": "article", "conference": "inproceedings", "preprint": "unpublished"}[p["type"]]
+    if p["type"] == "preprint" and p.get("arxivId"):
+        kind = "misc"
     key = f"{p['authors'][0].split()[-1].lower()}{p['year']}{p['id'].replace('-', '')}"
     return f"@{kind}{{{key},\n" + ",\n".join(
         f"  {key} = {{{value}}}" for key, value in fields.items()

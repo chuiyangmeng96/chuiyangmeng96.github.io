@@ -5,24 +5,27 @@
     "selected": true,
     "featured": true,
     "topic": "interpretability",
-    "title": "Social Circuits Behind Multi-Agent Echo Chambers",
+    "title": "Social Circuits behind Multi-agent Echo Chambers",
     "authors": [
       "Chuiyang Meng",
       "Wenlu Yu",
       "Ming Tang",
       "Cheng Li"
     ],
-    "venue": "Manuscript",
-    "venueShort": "Manuscript",
+    "venue": "arXiv preprint arXiv:2609.34444",
+    "venueShort": "arXiv",
     "status": "Submitted to ICLR 2027",
     "type": "preprint",
     "summary": "Receiver-state interventions trace how messages correct errors or reinforce them, guiding selective communication between agents.",
     "explanation": "Agents can agree because evidence corrects a shared mistake, or because repeated claims reinforce it. This example contrasts these two outcomes. Social Circuits traces message effects through receiver activations, and Circuit-Guided Deliberation learns which message combinations help the receiver.",
     "figureCaption": "Figure 1 · Error correction and echo chambers",
     "assetSource": "Author manuscript prepared for arXiv, 2026-09-27",
-    "pdf": "assets/papers/social-circuits.pdf",
+    "pdf": "https://arxiv.org/pdf/2609.34444",
     "figure": "assets/figures/social-circuits-figure1.png",
-    "thumbnail": "assets/figures/social-circuits-figure1-thumb.webp"
+    "thumbnail": "assets/figures/social-circuits-figure1-thumb.webp",
+    "arxivId": "2609.34444",
+    "arxiv": "https://arxiv.org/abs/2609.34444",
+    "arxivSubmitted": "2026-09-28"
   },
   {
     "id": "cortex",
@@ -36,17 +39,20 @@
       "Ming Tang",
       "Vincent W.S. Wong"
     ],
-    "venue": "Manuscript",
-    "venueShort": "Manuscript",
+    "venue": "arXiv preprint arXiv:2609.34449",
+    "venueShort": "arXiv",
     "status": "Submitted to ICLR 2027",
     "type": "preprint",
     "summary": "Domain-conditioned learning dynamics shape shared and specialized functions within a single dense language model.",
     "explanation": "CORTEX uses domain-conditioned gradients and cross-domain gradient similarity to identify which parameters support shared or specialized functions. These assignments evolve during training, allowing functional modularity to emerge within one dense model.",
     "figureCaption": "Figure 1(b) · Learning shared and specialized functions with CORTEX",
     "assetSource": "Author manuscript prepared for arXiv, 2026-09-27",
-    "pdf": "assets/papers/cortex.pdf",
+    "pdf": "https://arxiv.org/pdf/2609.34449",
     "figure": "assets/figures/cortex.png",
-    "thumbnail": "assets/figures/cortex-thumb.webp"
+    "thumbnail": "assets/figures/cortex-thumb.webp",
+    "arxivId": "2609.34449",
+    "arxiv": "https://arxiv.org/abs/2609.34449",
+    "arxivSubmitted": "2026-09-28"
   },
   {
     "id": "florg",
