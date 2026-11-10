@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE_URL = "https://chuiyangmeng96.github.io"
 PAPERS = json.loads((ROOT / "data/publications.json").read_text())
 NEWS = sorted(json.loads((ROOT / "data/news.json").read_text()), key=lambda item: item["date"], reverse=True)
+TALKS = sorted(json.loads((ROOT / "data/talks.json").read_text()), key=lambda item: item["date"], reverse=True)
 ASSET_VERSIONS = {
     name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest()[:10]
     for name in ("styles.css", "script.js")
@@ -269,7 +270,16 @@ background += '''</section><section class="content-section" id="awards"><h2>Awar
 </ul>'''
 background += f'</section><section class="content-section" id="skills"><h2>Skills</h2>{skills}<p class="membership">IEEE Member</p></section>'
 
-teaching = heading("ACADEMIC COMMUNITY", "Teaching & service", "Supporting students and contributing to the research community.")
+teaching = heading("ACADEMIC COMMUNITY", "Talks, teaching & service", "Sharing research, supporting students, and contributing to the research community.")
+teaching += '<section class="content-section" id="talks" aria-labelledby="talks-title"><h2 id="talks-title">Talks</h2>'
+for talk in TALKS:
+    date_label = datetime.strptime(talk["date"], "%Y-%m-%d").strftime("%B %d, %Y")
+    teaching += f'''<article class="timeline-row" id="{e(talk['id'])}">
+    <p class="timeline-date"><time datetime="{e(talk['date'])}">{date_label}</time><br><span>{e(talk['location'])}</span></p>
+    <div><p class="organization">{e(talk['event'])}</p><h3>{e(talk['title'])}</h3>
+    <p class="muted">{e(talk['institution'])} · {e(talk['status'])}</p>
+    <a class="text-link" href="{e(talk['eventUrl'])}">Workshop details →</a></div></article>'''
+teaching += '</section>'
 teaching += '<section class="content-section"><h2>Teaching</h2>'
 teaching += row("2021–2025", "Vancouver, Canada", "University of British Columbia", "ELEC 331 · Computer Communications", '<p class="muted">Teaching Assistant</p><p>Fall 2021, Spring 2022, Fall 2023, Spring 2024, Spring 2025</p>')
 teaching += row("Fall 2019", "Baltimore, USA", "Johns Hopkins University", "EN.520.647 · Information Theory", '<p class="muted">Teaching Assistant</p>')
@@ -279,7 +289,7 @@ outputs = {
     "index.html": ("About", "about", "Chuiyang Meng — Postdoctoral Research Fellow at Simon Fraser University. Research in foundation models, mechanistic interpretability, multi-agent systems, distributed learning, and communication networks.", home),
     "publications.html": ("Publications", "publications", "Research publications by Chuiyang Meng, with paper PDFs, method figures, and citations.", publications),
     "experience.html": ("Background", "background", "Chuiyang Meng's research experience, education, and technical background.", background),
-    "teaching.html": ("Teaching & service", "teaching", "Teaching and academic service by Chuiyang Meng.", teaching),
+    "teaching.html": ("Talks, teaching & service", "teaching", "Research talks, teaching, and academic service by Chuiyang Meng.", teaching),
     "skills.html": ("Skills", "background", "Chuiyang Meng's technical skills and methods.", heading("BACKGROUND", "Skills", 'See my full <a href="experience.html">experience and education →</a>') + '<section class="content-section">' + skills + '</section>'),
 }
 for filename, args in outputs.items():
