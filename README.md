@@ -31,7 +31,7 @@ The five pages are About (`index.html`), Publications, Background (`experience.h
 
 ## Recovered content and asset provenance
 
-The original public repository and history were recovered from `chuiyangmeng96/chuiyangmeng96.github.io`. The photograph comes from that recovered site. Biography, contact details, experience, education, awards, and academic service were synchronized with the author's current CV on September 27, 2026. The downloadable CV was rebuilt from that updated project's exact source and class file.
+The original public repository and history were recovered from `chuiyangmeng96/chuiyangmeng96.github.io`. The photograph comes from that recovered site. Biography, contact details, experience, education, awards, and academic service were synchronized with the author's current CV on September 27, 2026. The downloadable CV was refreshed on November 10, 2026 from `output/pdf/academic_cv/Chuiyang_Meng_CV.tex`, including the November 11 workshop talk, using the embedded original class. The workshop abbreviation was corrected to the official MWN spelling. CV links include a content hash so new releases bypass cached copies; the permanent PDF path remains unchanged.
 
 Social Circuits and CORTEX link to their public arXiv records, [2609.34444](https://arxiv.org/abs/2609.34444) and [2609.34449](https://arxiv.org/abs/2609.34449). Their PDF buttons use the corresponding arXiv PDF URLs so readers receive the latest public versions. Titles, authors, identifiers, and submission dates were verified against the official arXiv API. The existing figures were extracted from author manuscripts prepared on September 27, 2026. Both papers retain their submitted-to-ICLR-2027 status; arXiv availability does not imply conference acceptance.
 

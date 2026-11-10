@@ -14,8 +14,9 @@ NEWS = sorted(json.loads((ROOT / "data/news.json").read_text()), key=lambda item
 TALKS = sorted(json.loads((ROOT / "data/talks.json").read_text()), key=lambda item: item["date"], reverse=True)
 ASSET_VERSIONS = {
     name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest()[:10]
-    for name in ("styles.css", "script.js")
+    for name in ("styles.css", "script.js", "Chuiyang_Meng_CV.pdf")
 }
+CV_HREF = f"Chuiyang_Meng_CV.pdf?v={ASSET_VERSIONS['Chuiyang_Meng_CV.pdf']}"
 
 
 def e(value):
@@ -178,9 +179,9 @@ def page(title, active, description, content, filename):
 </head><body><a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header container"><a class="site-name" href="./">Chuiyang Meng<span class="name-dot">.</span></a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
-<nav class="site-nav" id="site-nav" aria-label="Main navigation">{''.join(nav)}<a class="cv-link" href="Chuiyang_Meng_CV.pdf" target="_blank" rel="noopener">CV ↗</a></nav></header>
+<nav class="site-nav" id="site-nav" aria-label="Main navigation">{''.join(nav)}<a class="cv-link" href="{CV_HREF}" target="_blank" rel="noopener">CV ↗</a></nav></header>
 <main class="container" id="main" tabindex="-1">{content}</main>
-<footer class="site-footer container"><p>© <span id="year">2026</span> Chuiyang Meng</p><div><a href="mailto:chuiyang_meng@sfu.ca">Email</a><a href="https://github.com/chuiyangmeng96" target="_blank" rel="noopener">GitHub ↗</a><a href="Chuiyang_Meng_CV.pdf" target="_blank" rel="noopener">Curriculum vitae ↗</a></div></footer>
+<footer class="site-footer container"><p>© <span id="year">2026</span> Chuiyang Meng</p><div><a href="mailto:chuiyang_meng@sfu.ca">Email</a><a href="https://github.com/chuiyangmeng96" target="_blank" rel="noopener">GitHub ↗</a><a href="{CV_HREF}" target="_blank" rel="noopener">Curriculum vitae ↗</a></div></footer>
 <dialog class="figure-dialog" aria-labelledby="preview-title"><button class="close-preview" type="button" aria-label="Close figure preview">×</button><div class="preview-body"></div></dialog>
 </body></html>
 '''
@@ -209,7 +210,7 @@ if len(NEWS) > 4:
 news += "</section>"
 
 
-home = '''<section class="intro" aria-labelledby="intro-title"><div class="intro-copy">
+home = f'''<section class="intro" aria-labelledby="intro-title"><div class="intro-copy">
   <p class="eyebrow">POSTDOCTORAL RESEARCH FELLOW · SIMON FRASER UNIVERSITY</p>
   <h1 id="intro-title">Chuiyang Meng</h1>
   <p class="intro-lead">I study how intelligent systems learn, reason, and collaborate, from the behavior of individual models to collective intelligence.</p>
@@ -221,7 +222,7 @@ home = '''<section class="intro" aria-labelledby="intro-title"><div class="intro
     <a class="social-link" href="https://orcid.org/0009-0000-9381-4916" target="_blank" rel="noopener" aria-label="ORCID"><img src="assets/icons/orcid.svg" alt="" width="24" height="24" aria-hidden="true"></a>
     <a class="social-link" href="https://www.linkedin.com/in/chuiyang-meng-b54a48185" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="assets/icons/linkedin.png" alt="" width="24" height="24" aria-hidden="true"></a>
     <a class="social-link" href="https://github.com/chuiyangmeng96" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/icons/github.svg" alt="" width="24" height="24" aria-hidden="true"></a>
-    <a class="social-link social-link--cv" href="Chuiyang_Meng_CV.pdf" target="_blank" rel="noopener" aria-label="Curriculum vitae">CV</a>
+    <a class="social-link social-link--cv" href="{CV_HREF}" target="_blank" rel="noopener" aria-label="Curriculum vitae">CV</a>
   </div>
   </div><figure class="profile-photo"><img src="life-photo-1.jpg" alt="Chuiyang Meng" width="190" height="236" fetchpriority="high"></figure>
 </section>
