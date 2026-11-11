@@ -12,6 +12,7 @@ SITE_URL = "https://chuiyangmeng96.github.io"
 PAPERS = json.loads((ROOT / "data/publications.json").read_text())
 NEWS = sorted(json.loads((ROOT / "data/news.json").read_text()), key=lambda item: item["date"], reverse=True)
 TALKS = sorted(json.loads((ROOT / "data/talks.json").read_text()), key=lambda item: item["date"], reverse=True)
+TALKS_BY_ID = {talk["id"]: talk for talk in TALKS}
 ASSET_VERSIONS = {
     name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest()[:10]
     for name in ("styles.css", "script.js", "Chuiyang_Meng_CV.pdf")
@@ -196,10 +197,18 @@ def row(date, place, organization, title, body):
     <div><p class="organization">{organization}</p><h3>{title}</h3>{body}</div></article>'''
 
 
+def talk_slides_link(talk):
+    if not talk.get("slides"):
+        return ""
+    return f'<a class="paper-link" href="{e(talk["slides"])}" target="_blank" rel="noopener">Slides (PDF) ↗</a>'
+
+
 def news_item(item):
     date_label = datetime.strptime(item["date"], "%Y-%m").strftime("%B %Y")
+    slides = talk_slides_link(TALKS_BY_ID.get(item.get("talkId"), {}))
+    resources = f'<div class="paper-links">{slides}</div>' if slides else ""
     return f'''<li class="news-item"><time datetime="{e(item['date'])}">{date_label}</time>
-    <div><h3><a href="{e(item['href'])}">{e(item['title'])}</a></h3><p>{e(item['body'])}</p></div></li>'''
+    <div><h3><a href="{e(item['href'])}">{e(item['title'])}</a></h3><p>{e(item['body'])}</p>{resources}</div></li>'''
 
 
 news = '<section class="news-section" id="news" aria-labelledby="news-title"><div class="section-heading"><h2 id="news-title">News</h2></div><ul class="news-list">'
@@ -275,11 +284,12 @@ teaching = heading("ACADEMIC COMMUNITY", "Talks, teaching & service", "Sharing r
 teaching += '<section class="content-section" id="talks" aria-labelledby="talks-title"><h2 id="talks-title">Talks</h2>'
 for talk in TALKS:
     date_label = datetime.strptime(talk["date"], "%Y-%m-%d").strftime("%B %d, %Y")
+    status = f" · {e(talk['status'])}" if talk.get("status") else ""
     teaching += f'''<article class="timeline-row" id="{e(talk['id'])}">
     <p class="timeline-date"><time datetime="{e(talk['date'])}">{date_label}</time><br><span>{e(talk['location'])}</span></p>
     <div><p class="organization">{e(talk['event'])}</p><h3>{e(talk['title'])}</h3>
-    <p class="muted">{e(talk['institution'])} · {e(talk['status'])}</p>
-    <a class="text-link" href="{e(talk['eventUrl'])}">Workshop details →</a></div></article>'''
+    <p class="muted">{e(talk['institution'])}{status}</p>
+    <div class="paper-links">{talk_slides_link(talk)}<a class="paper-link" href="{e(talk['eventUrl'])}">Workshop details ↗</a></div></div></article>'''
 teaching += '</section>'
 teaching += '<section class="content-section"><h2>Teaching</h2>'
 teaching += row("2021–2025", "Vancouver, Canada", "University of British Columbia", "ELEC 331 · Computer Communications", '<p class="muted">Teaching Assistant</p><p>Fall 2021, Spring 2022, Fall 2023, Spring 2024, Spring 2025</p>')

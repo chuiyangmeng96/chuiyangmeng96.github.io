@@ -1,9 +1,10 @@
 [
   {
     "date": "2026-11",
-    "title": "Upcoming talk at IEEE MWN 2026",
-    "body": "I will present “Rethinking Collaboration: Cost and Value in Fine-Tuning and Multi-Agent Reasoning” at the IEEE MWN Workshop on 6G for Ubiquitous Intelligence, University of Victoria, on November 11, 2026.",
+    "title": "Talk at IEEE MWN 2026",
+    "body": "Slides are available for “Rethinking Collaboration: Cost and Value in Fine-Tuning and Multi-Agent Reasoning”, my November 11, 2026 talk at the IEEE MWN Workshop on 6G for Ubiquitous Intelligence, University of Victoria.",
     "href": "teaching.html#talks",
+    "talkId": "rethinking-collaboration-2026",
     "source": "Current academic CV and official workshop page: https://oac.uvic.ca/mwn2026; checked November 10, 2026."
   },
   {
